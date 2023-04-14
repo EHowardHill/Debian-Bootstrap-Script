@@ -1,6 +1,11 @@
 #!/bin/bash
 set -e
 
+echo "WARNING!!! The following script will install Debian on the following hard drive, wiping anything else on it."
+echo "This includes FILES as well as any existing OPERATING SYSTEMS."
+echo "Only use if you know exactly what you are doing!!!"
+echo ""
+
 # get the list of all block devices under /dev except mounted drives
 devices=$(lsblk -rno NAME,SIZE,MOUNTPOINT | awk '$3 == "" {print "/dev/"$1,$2}')
 
