@@ -14,7 +14,7 @@ echo "Available drives:"
 echo "$devices"
 
 # prompt the user to select a drive
-read -p "Enter the device name for the drive you want to mount (e.g. /dev/sdb): " disk
+read -p "Enter the device name for the drive you want to install on (e.g. /dev/sda): " disk
 
 # if the user input is invalid, set the default to /dev/sda
 if [[ ! $devices =~ (^|[[:space:]])"$disk"($|[[:space:]]) ]]; then
