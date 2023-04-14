@@ -1,4 +1,4 @@
-#!/bin/ash
+#!/bin/bash
 set -e
 
 echo "WARNING!!! The following script will install Debian on the following hard drive, wiping anything else on it."
