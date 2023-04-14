@@ -72,12 +72,13 @@ apt upgrade -y
 
 # Set up user
 mkdir /home/user
+apt install -y sudo
 useradd -m -d /home/user user
 echo "root:password" | chpasswd
 echo "user:password" | chpasswd
 usermod -aG sudo user
 
-# Set up autologin
+# Set up sddm
 apt install -y sddm
 systemctl enable sddm
 
